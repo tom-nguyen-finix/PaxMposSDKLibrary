@@ -5,11 +5,18 @@ import PackageDescription
 
 let package = Package(
     name: "PaxMposSDKLibrary",
+    platforms: [
+        .iOS(.v14) // iOS version target
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "PaxMposSDKLibrary",
             targets: ["PaxMposSDK"]),
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        .package(name: "PaxMposSDK", path: "./Sources/PaxMposSDK.xcframework")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
