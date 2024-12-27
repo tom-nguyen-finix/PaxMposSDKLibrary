@@ -9,13 +9,12 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "PaxMposSDKLibrary",
-            targets: ["PaxMposSDKLibrary"]),
+            targets: ["PaxMposSDK"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "PaxMposSDKLibrary"),
+        .binaryTarget(name: "PaxMposSDK", path: "./Sources/PaxMposSDK.xcframework"),
         .testTarget(
             name: "PaxMposSDKLibraryTests",
             dependencies: ["PaxMposSDKLibrary"]
