@@ -1,0 +1,22 @@
+// Framework modulemap for linking against another framework, like a static archive `.a`
+// From https://forums.developer.apple.com/forums/thread/115190
+
+framework module PaxMposSDK {
+    umbrella header "SDK-Private.h"
+
+    header "SDK-Private.h"
+
+    export *
+//    module * { export * }
+
+//    explicit module ReachabilityPrivate {
+//      header "Reachability.h"
+//      export *
+//    }
+}
+
+
+module PaxMposSDK.Swift {
+  header "PaxMposSDK-Swift.h"
+  requires objc
+}
