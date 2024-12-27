@@ -5,9 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "PaxMposSDKLibrary",
-    platforms: [
-        .iOS(.v14) // iOS version target
-    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
