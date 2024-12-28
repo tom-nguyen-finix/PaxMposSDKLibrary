@@ -11,6 +11,9 @@ let package = Package(
             name: "PaxMposSDKLibrary",
             targets: ["PaxMposSDK"]),
     ],
+    dependencies: [
+        .package(path: "./Sources/PaxEasyLinkController.xcframework")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
